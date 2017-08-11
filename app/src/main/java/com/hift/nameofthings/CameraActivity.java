@@ -36,7 +36,7 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
     public static final String ALLOW_KEY = "ALLOWED";
     public static final String CAMERA_PREF = "camera_pref";
 
-    public static final String API_KEY = "AIzaSyDL4zGqOw9Mxay63E-HFcfdxoOeHTCQlgg";
+    public static final String API_KEY = "YOUR_OWN_API_KEY"; //
 
 
     private Preview mPreview;
