@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.hift.nameofthings"
+        minSdkVersion 23
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.7
+        sourceCompatibility 1.7
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.volley:volley:1.0.0'
+
+    compile 'com.google.api-client:google-api-client-android:1.22.0'
+    compile 'com.google.apis:google-api-services-vision:v1-rev357-1.22.0'
+    compile 'commons-io:commons-io:2.5'
+
+    compile ('com.google.apis:google-api-services-translate:v2-rev51-1.22.0') {
+        exclude group: 'com.google.guava'
+    }
+
+    compile 'com.google.code.findbugs:jsr305:2.0.1'
+
+    compile 'com.google.http-client:google-http-client-gson:1.20.0' exclude module: 'httpclient'
+    compile 'cz.jirutka.unidecode:unidecode:1.0.1'
+    compile 'org.atilika.kuromoji:kuromoji:0.7.7'
+    compile 'info.hoang8f:fbutton:1.0.5'
+
+    testCompile 'junit:junit:4.12'
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CameraActivity"
+    android:id="@+id/main_relative">
+
+    <com.hift.nameofthings.Preview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/preview"/>
+
+    <Button
+        android:id="@+id/captureFront"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:text="Snap"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        />
+</RelativeLayout>
